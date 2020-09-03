@@ -5,13 +5,20 @@ struct args {
     int n;
 };
 
+static void foo2(struct schedule* S, int i) {
+    printf("foo2 start: %d\n", i);
+    co_yield(S);
+    printf("foo2 end: %d\n", i);
+}
+
 static void foo(struct schedule* S, void* ud) {
     struct args* arg = ud;
     int start = arg->n;
     int i;
     for (i = 0; i < 5; i++) {
-        printf("coroutine %d: %d\n", co_running(S), start + i);
-        co_yield(S);
+        // printf("coroutine %d: %d\n", co_running(S), start + i);
+        //co_yield(S);
+        foo2(S, start + i);
     }
 }
 

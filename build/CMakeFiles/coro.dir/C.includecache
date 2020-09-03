@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/data/lzh/coroutine/co.c
+co.h
+/data/lzh/coroutine/co.h
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+stddef.h
+-
+string.h
+-
+stdint.h
+-
+ucontext.h
+-
+
+/data/lzh/coroutine/co.h
+
+/data/lzh/coroutine/main.c
+co.h
+/data/lzh/coroutine/co.h
+stdio.h
+-
+

@@ -101,12 +101,13 @@ int co_new(struct schedule* S, co_func f, void* ud) {
 }
 
 static void mainfunc(uint32_t low32, uint32_t hi32) {
+    printf("mainfunc\n");
     uintptr_t ptr = (uintptr_t)low32 | ((uintptr_t)hi32 << 32);
     struct schedule* S = (struct schedule*)ptr;
     int id = S->running_id;
     struct coro* co = S->co_arr[id];
-    co->f(S, co->ud); // ??
-    _co_del(co);
+    co->f(S, co->ud); // 开始执行协程函数
+    _co_del(co);  // 执行完后释放协程对象
     S->co_arr[id] = NULL;
     --S->nco;
     S->running_id = -1;
