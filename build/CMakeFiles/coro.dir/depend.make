@@ -4,6 +4,6 @@
 CMakeFiles/coro.dir/co.c.o: ../co.c
 CMakeFiles/coro.dir/co.c.o: ../co.h
 
-CMakeFiles/coro.dir/main.c.o: ../co.h
-CMakeFiles/coro.dir/main.c.o: ../main.c
+CMakeFiles/coro.dir/main2.c.o: ../co.h
+CMakeFiles/coro.dir/main2.c.o: ../main2.c
 

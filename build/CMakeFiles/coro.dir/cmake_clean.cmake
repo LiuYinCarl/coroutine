@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/coro.dir/co.c.o"
-  "CMakeFiles/coro.dir/main.c.o"
+  "CMakeFiles/coro.dir/main2.c.o"
   "coro"
   "coro.pdb"
 )

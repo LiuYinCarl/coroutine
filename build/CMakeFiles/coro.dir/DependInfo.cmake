@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/data/lzh/coroutine/co.c" "/data/lzh/coroutine/build/CMakeFiles/coro.dir/co.c.o"
-  "/data/lzh/coroutine/main.c" "/data/lzh/coroutine/build/CMakeFiles/coro.dir/main.c.o"
+  "/data/lzh/coroutine/main2.c" "/data/lzh/coroutine/build/CMakeFiles/coro.dir/main2.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

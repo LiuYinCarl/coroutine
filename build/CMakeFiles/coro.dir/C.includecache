@@ -26,9 +26,3 @@ ucontext.h
 
 /data/lzh/coroutine/co.h
 
-/data/lzh/coroutine/main.c
-co.h
-/data/lzh/coroutine/co.h
-stdio.h
--
-

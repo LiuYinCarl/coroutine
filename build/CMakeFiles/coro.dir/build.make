@@ -60,18 +60,18 @@ include CMakeFiles/coro.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/coro.dir/flags.make
 
-CMakeFiles/coro.dir/main.c.o: CMakeFiles/coro.dir/flags.make
-CMakeFiles/coro.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/lzh/coroutine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/coro.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/coro.dir/main.c.o   -c /data/lzh/coroutine/main.c
+CMakeFiles/coro.dir/main2.c.o: CMakeFiles/coro.dir/flags.make
+CMakeFiles/coro.dir/main2.c.o: ../main2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/lzh/coroutine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/coro.dir/main2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/coro.dir/main2.c.o   -c /data/lzh/coroutine/main2.c
 
-CMakeFiles/coro.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/coro.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/lzh/coroutine/main.c > CMakeFiles/coro.dir/main.c.i
+CMakeFiles/coro.dir/main2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/coro.dir/main2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/lzh/coroutine/main2.c > CMakeFiles/coro.dir/main2.c.i
 
-CMakeFiles/coro.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/coro.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/lzh/coroutine/main.c -o CMakeFiles/coro.dir/main.c.s
+CMakeFiles/coro.dir/main2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/coro.dir/main2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/lzh/coroutine/main2.c -o CMakeFiles/coro.dir/main2.c.s
 
 CMakeFiles/coro.dir/co.c.o: CMakeFiles/coro.dir/flags.make
 CMakeFiles/coro.dir/co.c.o: ../co.c
@@ -88,13 +88,13 @@ CMakeFiles/coro.dir/co.c.s: cmake_force
 
 # Object files for target coro
 coro_OBJECTS = \
-"CMakeFiles/coro.dir/main.c.o" \
+"CMakeFiles/coro.dir/main2.c.o" \
 "CMakeFiles/coro.dir/co.c.o"
 
 # External object files for target coro
 coro_EXTERNAL_OBJECTS =
 
-coro: CMakeFiles/coro.dir/main.c.o
+coro: CMakeFiles/coro.dir/main2.c.o
 coro: CMakeFiles/coro.dir/co.c.o
 coro: CMakeFiles/coro.dir/build.make
 coro: CMakeFiles/coro.dir/link.txt

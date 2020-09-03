@@ -153,32 +153,32 @@ co.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro.dir/build.make CMakeFiles/coro.dir/co.c.s
 .PHONY : co.c.s
 
-main.o: main.c.o
+main2.o: main2.c.o
 
-.PHONY : main.o
+.PHONY : main2.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro.dir/build.make CMakeFiles/coro.dir/main.c.o
-.PHONY : main.c.o
+main2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro.dir/build.make CMakeFiles/coro.dir/main2.c.o
+.PHONY : main2.c.o
 
-main.i: main.c.i
+main2.i: main2.c.i
 
-.PHONY : main.i
+.PHONY : main2.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro.dir/build.make CMakeFiles/coro.dir/main.c.i
-.PHONY : main.c.i
+main2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro.dir/build.make CMakeFiles/coro.dir/main2.c.i
+.PHONY : main2.c.i
 
-main.s: main.c.s
+main2.s: main2.c.s
 
-.PHONY : main.s
+.PHONY : main2.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro.dir/build.make CMakeFiles/coro.dir/main.c.s
-.PHONY : main.c.s
+main2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro.dir/build.make CMakeFiles/coro.dir/main2.c.s
+.PHONY : main2.c.s
 
 # Help Target
 help:
@@ -192,9 +192,9 @@ help:
 	@echo "... co.o"
 	@echo "... co.i"
 	@echo "... co.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... main2.o"
+	@echo "... main2.i"
+	@echo "... main2.s"
 .PHONY : help
 
 
