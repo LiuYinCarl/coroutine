@@ -8,7 +8,8 @@ struct args {
 static void foo(struct schedule* S, void* ud) {
     struct args* arg = ud;
     int start = arg->n;
-    for (int i = 0; i < 5; i++) {
+    int i;
+    for (i = 0; i < 5; i++) {
         printf("coroutine %d: %d\n", co_running(S), start + i);
         co_yield(S);
     }

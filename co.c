@@ -1,6 +1,4 @@
 // https://github.com/chenyahui/AnnotatedCode/blob/master/coroutine/coroutine.c  
-
-
 #include "co.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,7 +62,8 @@ struct schedule* co_open(void) {
 
 void co_close(struct schedule* S) {
     struct coro* cor = NULL;
-    for (int i = 0; i < S->cap; i++) {
+    int i;
+    for (i = 0; i < S->cap; i++) {
         cor = S->co_arr[i];
         if (cor) {
             _co_del(cor);
