@@ -1,3 +1,0 @@
-/data/lzh/coroutine/build/CMakeFiles/rebuild_cache.dir
-/data/lzh/coroutine/build/CMakeFiles/coro.dir
-/data/lzh/coroutine/build/CMakeFiles/edit_cache.dir

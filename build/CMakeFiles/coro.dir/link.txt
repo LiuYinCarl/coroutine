@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/coro.dir/main.c.o CMakeFiles/coro.dir/co.c.o  -o coro 
