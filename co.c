@@ -42,6 +42,7 @@ struct coro* _co_new(struct schedule* S, co_func f, void* ud) {
     co->size = 0;
     co->status = CO_READY;
     co->stack = NULL;
+    co->ctx.uc_link = S->co_arr[0];  // 所有协程执行完之后默认跳至主协程
     return co;
 }
 
@@ -54,7 +55,7 @@ struct schedule* co_open(void) {
     struct schedule* S = malloc(sizeof(*S));  // sizeof(*S) ??
     S->nco = 0;
     S->cap = DEFAULT_COROUTINE;
-    S->running_id = -1;
+    S->running_id = 0;  // 主协诚 id 设置为 0
     S->co_arr = malloc(sizeof(struct coro*) * S->cap);
     memset(S->co_arr, 0, sizeof(struct coro*) * S->cap);
     return S;
@@ -121,12 +122,26 @@ void co_resume(struct schedule* S, int id) {
     struct coro* co = S->co_arr[id];
     if (co == NULL)
         return;
+
     int status = co->status;
     switch(status) {
         case CO_READY:
             getcontext(&co->ctx);
             co->ctx.uc_stack.ss_sp = S->stack;
             co->ctx.uc_stack.ss_size = STACK_SIZE;
+            
+            
+            // if (id == -1) {  // 当前协程如果是被主协程启动的
+                
+            // } else {  // 当前协程是被其他协程启动的
+            //     ucontext_t* ctx_ptr = &(S->co_arr[id]->ctx);
+            // }
+
+            int id = S->running_id;
+            ucontext_t* cur_ctx_ptr = &(S->co_arr[id]->ctx);
+
+            
+
             co->ctx.uc_link = &S->main;
             S->running_id = id;
             co->status = CO_RUNNING;
